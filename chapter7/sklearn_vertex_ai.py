@@ -1,3 +1,5 @@
+%%writefile trainer/trainer.py
+
 import joblib
 import numpy as np
 import pandas as pd
@@ -9,7 +11,7 @@ from sklearn.metrics import (confusion_matrix, precision_score,
                              accuracy_score)
 
 
-df_raw = pd.read_csv("gs://data-driven-ml/churn-dataset.csv")
+df_raw = pd.read_csv("/gcs/low-code-ai-book/churn_dataset.csv")
 df_1 = df_raw.replace({'TotalCharges': {' ': 0.0}})
 df_2 = df_1.astype({'TotalCharges':'float64'})
 
@@ -17,7 +19,7 @@ df_2['AvgMonthlyCharge'] = df_2['TotalCharges']/df_2['tenure']
 df_2['DiffCharges']=df_2['MonthlyCharges']-df_2['AvgMonthlyCharge']
 
 df_3 = df_2.copy()
-df_3 = df_3.drop(columns=['AvgMonthlyCharge', 'gender','StreamingTV',
+df_prep = df_3.drop(columns=['AvgMonthlyCharge', 'gender','StreamingTV',
                           'StreamingMovies','PhoneService',                     
                           'customerID'])
 
@@ -26,7 +28,7 @@ categorical_columns = ['Partner', 'Dependents', 'MultipleLines',
                       'InternetService','OnlineSecurity',
                       'OnlineBackup', 'DeviceProtection',     
                       'TechSupport','Contract',
-                      'PaperlessBilling','PaymentMethod','DiffBuckets']
+                      'PaperlessBilling','PaymentMethod']
 
 X_num = df_prep[numeric_columns]
 X_cat = df_prep[categorical_columns]
@@ -48,6 +50,7 @@ cls = LogisticRegression()
 cls.fit(X_train_scaled, y_train)
 
 X_test_scaled = scaler.transform(X_test)
+y_pred = cls.predict(X_test_scaled)
 
 print('Accuracy:', accuracy_score(y_test, y_pred))
 print('Precision:', precision_score(y_test, y_pred, labels=['Yes','No'], 
@@ -55,4 +58,4 @@ print('Precision:', precision_score(y_test, y_pred, labels=['Yes','No'],
 print('Recall:',recall_score(y_test, y_pred, labels=['Yes','No'],
                    pos_label='Yes'))
 
-joblib.dump(cls, 'gcs/<YOUR-BUCKET-NAME>/sklearn_model.joblib')
+joblib.dump(cls, '/gcs/<YOUR-BUCKET-NAME>/sklearn_model.joblib')
