@@ -36,14 +36,14 @@ If you find any errors or other issues with the code shared here, please create 
 
 2. Data Is the First Step
  *  Overview of Use Cases and Datasets Used in the Book
-     *  1. Retail: Product Pricing
-     *  2. Healthcare: Heart Disease Campaign
-     *  3. Energy: Utility Campaign
-     *  4. Insurance: Advertising Media Channel Sales Prediction
-     *  5. Financial: Fraud Detection
-     *  6. Energy: Power Production Prediction
-     *  7. Telecommunications: Customer Churn Prediction
-     *  8. Automotive: Improve Custom Model Performance
+     *  Retail: Product Pricing
+     *  Healthcare: Heart Disease Campaign
+     *  Energy: Utility Campaign
+     *  Insurance: Advertising Media Channel Sales Prediction
+     *  Financial: Fraud Detection
+     *  Energy: Power Production Prediction
+     *  Telecommunications: Customer Churn Prediction
+     *  Automotive: Improve Custom Model Performance
  *  Data and File Types
      *  Quantitative and Qualitative Data
      *  Structured, Unstructured, and Semistructured Data
