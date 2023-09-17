@@ -18,6 +18,7 @@ If you find any errors or other issues with the code shared here, please create 
   -  O’Reilly Online Learning
   -  How to Contact Us
   -  Acknowledgments
+
 1. How Data Drives Decision Making in Machine Learning
   -  What Is the Goal or Use Case?
   -  An Enterprise ML Workflow
@@ -32,6 +33,7 @@ If you find any errors or other issues with the code shared here, please create 
     -  Model Deployment (Serving)
     -  Maintaining Models
   -  Summary
+
 2. Data Is the First Step
   -  Overview of Use Cases and Datasets Used in the Book
     -  1. Retail: Product Pricing
@@ -51,6 +53,7 @@ If you find any errors or other issues with the code shared here, please create 
     -  Use GitHub to Create a Data Repository for Your Projects
     -  Using Google’s Colaboratory for Low-Code AI Projects
   -  Summary
+
 3. Machine Learning Libraries and Frameworks
   -  No-Code AutoML
   -  How AutoML Works
@@ -59,6 +62,7 @@ If you find any errors or other issues with the code shared here, please create 
     -  SQL ML Frameworks
     -  Open Source ML Libraries
   -  Summary
+
 4. Use AutoML to Predict Advertising Media Channel Sales
   -  The Business Use Case: Media Channel Sales Prediction
     -  Project Workflow
@@ -75,6 +79,7 @@ If you find any errors or other issues with the code shared here, please create 
     -  Model Feature Importance (Attribution)
     -  Get Predictions from Your Model
   -  Summary
+
 5. Using AutoML to Detect Fraudulent Transactions
   -  The Business Use Case: Fraud Detection for Financial Transactions
     -  Project Workflow
@@ -92,6 +97,7 @@ If you find any errors or other issues with the code shared here, please create 
     -  Model Feature Importances
     -  Getting Predictions from Your Model
   -  Summary
+
 6. Using BigQuery ML to Train a Linear Regression Model
   -  The Business Use Case: Power Plant Production
   -  Cleaning the Dataset Using SQL in BigQuery
@@ -112,6 +118,7 @@ If you find any errors or other issues with the code shared here, please create 
     -  Exercises
   -  Deep Dive: Using Cloud Shell to View Your Cloud Storage File
   -  Summary
+
 7. Training Custom ML Models in Python
   -  The Business Use Case: Customer Churn Prediction
   -  Choosing Among No-Code, Low-Code, or Custom Code ML Solutions
@@ -130,6 +137,7 @@ If you find any errors or other issues with the code shared here, please create 
     -  Training a Neural Network Classifier Using Keras
     -  Building Custom ML Models on Vertex AI
   -  Summary
+
 8. Improving Custom Model Performance
   -  The Business Use Case: Used Car Auction Prices
   -  Model Improvement in Scikit-Learn
@@ -152,6 +160,7 @@ If you find any errors or other issues with the code shared here, please create 
     -  Automatic Model Tuning with Amazon SageMaker
     -  Azure Machine Learning
   -  Summary
+
 9. Next Steps in Your AI Journey
   -  Going Deeper into Data Science
     -  Working with Unstructured Data
