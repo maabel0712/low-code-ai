@@ -7,7 +7,7 @@ If you find any errors or other issues with the code shared here, please create 
 
 ### Title: Low-Code AI
 
-<img src="Low-Code_AI.png" alt="Low-Code AI" width="400"/>
+<img src="Low-Code_AI.jpg" alt="Low-Code AI" width="400"/>
 
 ## Table of Contents
 0. Preface
@@ -22,16 +22,16 @@ If you find any errors or other issues with the code shared here, please create 
 1. How Data Drives Decision Making in Machine Learning
    *  What Is the Goal or Use Case?
    *  An Enterprise ML Workflow
-       *  Defining the Business Objective or Problem Statement
-       *  Data Collection
-       *  Data Preprocessing
-       *  Data Analysis
-       *  Data Transformation and Feature Selection
-       *  Researching the Model Selection or Using AutoML (a No-Code Solution)
-       *  Model Training, Evaluation, and Tuning
-       *  Model Testing
-       *  Model Deployment (Serving)
-       *  Maintaining Models
+     *  Defining the Business Objective or Problem Statement
+     *  Data Collection
+     *  Data Preprocessing
+     *  Data Analysis
+     *  Data Transformation and Feature Selection
+     *  Researching the Model Selection or Using AutoML (a No-Code Solution)
+     *  Model Training, Evaluation, and Tuning
+     *  Model Testing
+     *  Model Deployment (Serving)
+     *  Maintaining Models
    *  Summary
 
 2. Data Is the First Step
