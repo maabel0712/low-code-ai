@@ -74,9 +74,9 @@ FROM
 
 -- Statement to create a linear regression model in BigQuery ML
 
-CREATE OR REPLACE MODEL data_driven_ml.energy_production
-  (model_type=’linear_reg’,
-   input_label_cols=’Energy_Production) AS
+CREATE OR REPLACE MODEL data_driven_ml.energy_production 
+  OPTIONS(model_type='linear_reg',
+          input_label_cols=['Energy_Production']) AS
 SELECT
   Temp,
   Ambient_Pressure,
@@ -109,9 +109,9 @@ FROM
 -- Train a linear regression model in BigQuery ML with global explanability enabled
 
 CREATE OR REPLACE MODEL data_driven_ml.energy_production
-  (model_type=’linear_reg’,
-   input_label_cols=’Energy_Production,
-   enable_global_explain=TRUE) AS
+  OPTIONS(model_type='linear_reg',
+          input_label_cols=['Energy_Production'],
+          enable_global_explain=TRUE) AS
 SELECT
   Temp,
   Ambient_Pressure,
@@ -149,9 +149,9 @@ FROM
 
 CREATE OR REPLACE MODEL data_driven_ml.energy_production_nn
   OPTIONS 
-    (model_type=’dnn_regressor’,
+    (model_type='dnn_regressor',
      hidden_units=[32,16,8],
-     input_label_cols=Energy_Production) AS
+     input_label_cols=['Energy_Production']) AS
 SELECT
   Temp,
   Ambient_Pressure,
@@ -160,5 +160,25 @@ SELECT
   Energy_Production
 FROM
   `your-project-id.data_driven_ml.ccpp_cleaned`
+
+-- Evaluate the newly trained neural network model
+
+SELECT
+  *
+FROM
+  ML.EVALUATE(MODEL data_driven_ml.energy_production)
+
+-- Serve a prediction on a single example with the neural network model
+
+SELECT
+  *
+FROM
+  ML.PREDICT(MODEL `your-project-id.data_driven_ml.energy_production`,
+    (
+    SELECT
+      27.45 AS Temp,
+      1001.23 AS Ambient_Pressure,
+      84 AS Relative_Humidity,
+      65.12 AS Exhaust_Vacuum) )
 
 
