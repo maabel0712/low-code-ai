@@ -1,4 +1,5 @@
-%%writefile trainer/trainer.py
+# Uncomment the following line if you're running the code in a Jupyter Notebook
+# %%writefile trainer/trainer.py
 
 import joblib
 import numpy as np
