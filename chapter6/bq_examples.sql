@@ -1,3 +1,6 @@
+-- SQL queries which are used in Chapter 6 in the book "Low-Code AI"
+-- If you wish, you can do a "Find and Replace" to replace your-project-id with your Google Cloud Project.
+
 -- Check for NULL values in Temp column
 
 SELECT 
